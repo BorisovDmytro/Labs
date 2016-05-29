@@ -1,0 +1,13 @@
+E:\education\k4s1\cSharp\lab1\lab1\lab1\bin\Debug\lab1.exe.config
+E:\education\k4s1\cSharp\lab1\lab1\lab1\obj\Debug\lab1.csprojResolveAssemblyReference.cache
+E:\education\k4s1\cSharp\lab1\lab1\lab1\obj\Debug\lab1.Form1.resources
+E:\education\k4s1\cSharp\lab1\lab1\lab1\obj\Debug\lab1.Properties.Resources.resources
+E:\education\k4s1\cSharp\lab1\lab1\lab1\obj\Debug\lab1.StudentDialog.resources
+E:\education\k4s1\cSharp\lab1\lab1\lab1\obj\Debug\lab1.csproj.GenerateResource.Cache
+E:\education\k4s1\cSharp\lab1\lab1\lab1\bin\Debug\lab1.exe
+E:\education\k4s1\cSharp\lab1\lab1\lab1\bin\Debug\lab1.pdb
+E:\education\k4s1\cSharp\lab1\lab1\lab1\obj\Debug\lab1.exe
+E:\education\k4s1\cSharp\lab1\lab1\lab1\obj\Debug\lab1.pdb
+D:\dat\cSharp\lab1\lab1\lab1\bin\Debug\lab1.exe.config
+D:\dat\cSharp\lab1\lab1\lab1\obj\Debug\lab1.exe
+D:\dat\cSharp\lab1\lab1\lab1\obj\Debug\lab1.pdb
