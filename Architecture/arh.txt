@@ -1,0 +1,455 @@
+rd #101
+out 11
+rd #11
+out 11
+in
+wr 100
+rd 100
+div #10
+wr 101
+rd 101
+mul #10
+wr 90
+rd 100
+sub 90
+wr 102
+CALL MAIN
+HLT
+
+MAIN:
+RD 101
+SUB #1
+WR R0
+RD 102
+SUB #1
+WR R1
+CALL DisplayX
+CALL DisplayY
+RD #42
+OUT 10
+RET
+
+DisplayY:
+RD #0
+WR R7
+DisplayMainLoop:
+RD #0
+WR R9
+DisplayRowLoop:
+RD #32
+OUT 10
+RD R9
+ADD #1
+WR R9
+SUB #16
+JNZ DisplayRowLoop
+RD R7
+add #1
+wr r7
+sub R1
+JNZ DisplayMainLoop
+RET
+
+DisplayX:
+RD #0
+WR R9
+DIsplayColumn:
+RD #32
+OUT 10
+RD R9
+ADD #1
+WR R9
+SUB R0
+JNZ DIsplayColumn
+RET
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// main function
+RD #0
+WR R0
+MAIN:
+IN 0
+SUB #48
+WR R1
+JNS CHECK
+JMP MAIN
+HLT
+// case first number
+NUM1:
+RD R1
+MUL #100
+MUL #10
+WR R5
+JMP MAIN
+// case second number
+NUM2:
+RD R1
+MUL #100
+WR R6
+JMP MAIN
+// case third number
+NUM3:
+RD R1
+MUL #10
+WR R7
+JMP MAIN
+// case 4 number
+NUM4:
+RD R1
+WR R8
+RD #0
+WR R0
+RD R5
+ADD R6
+ADD R7
+ADD R8
+WR 90
+JMP MAIN
+// switch ()
+CHECK:
+RD R0
+ADD #1
+WR R0
+RD R0
+SUB #1
+JZ NUM1
+RD R0
+SUB #2
+JZ NUM2
+RD R0
+SUB #3
+JZ NUM3
+RD R0
+SUB #4
+JZ NUM4
+JMP MAIN
+
+
+
+
+
+
+
+
+
+
+RD #0
+WR R0
+RD #8
+WR 100
+EI
+JMP INIT_KEY
+MAIN:JMP MAIN
+HLT
+
+INCR_KEY:NOP
+NOP
+IN 0
+SUB #48
+WR R1
+JNS CHECK
+JMP MAIN
+
+NUM1:
+RD R1
+MUL #100
+MUL #10
+WR R5
+JMP MAIN
+
+NUM2:
+RD R1
+MUL #100
+WR R6
+JMP MAIN
+
+NUM3:
+RD R1
+MUL #10
+WR R7
+JMP MAIN
+
+NUM4:
+RD R1
+WR R8
+RD #0
+WR R0
+RD R5
+ADD R6
+ADD R7
+ADD R8
+WR 90
+JMP MAIN
+
+CHECK:
+RD R0
+ADD #1
+WR R0
+RD R0
+SUB #1
+JZ NUM1
+RD R0
+SUB #2
+JZ NUM2
+RD R0
+SUB #3
+JZ NUM3
+RD R0
+SUB #4
+JZ NUM4
+JMP MAIN
+
+INIT_KEY:
+rd #000101
+out 1
+rd #000011
+out 1
+rd #000103
+out
+JMP MAIN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+RD #100
+WR R1
+RD #005
+WR R2
+CALL 22
+WR R6
+RD #110
+WR R1
+RD #005
+WR R2
+CALL 22
+WR R7
+RD #120
+WR R1
+RD #005
+WR R2
+CALL 22
+ADD R6
+ADD R7
+DIV #003
+OUT
+JMP 130
+RD @R1+
+WR R3
+RD #000
+WR R4
+RD @R1+
+SUB R3
+JNZ 32
+RD R4
+ADD #001
+WR R4
+JRNZ R2,26
+RD R4
+RET
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+RD 100
+WR R0
+RD R0
+WR 129
+
+RD 110
+WR R0
+RD R0
+WR 139
+
+RD 101
+WR R0
+RD R0
+WR 128
+
+RD 111
+WR R0
+RD R0
+WR 138
+
+RD 102
+WR R0
+RD R0
+WR 127
+
+RD 112
+WR R0
+RD R0
+WR 137
+
+RD 103
+WR R0
+RD R0
+WR 126
+
+RD 113
+WR R0
+RD R0
+WR 136
+
+RD 104
+WR R0
+RD R0
+WR 125
+
+RD 114
+WR R0
+RD R0
+WR 135
+
+RD 105
+WR R0
+RD R0
+WR 124
+
+RD 115
+WR R0
+RD R0
+WR 134
+
+RD 106
+WR R0
+RD R0
+WR 123
+
+RD 116
+WR R0
+RD R0
+WR 133
+
+RD 107
+WR R0
+RD R0
+WR 122
+
+RD 117
+WR R0
+RD R0
+WR 132
+
+RD 108
+WR R0
+RD R0
+WR 121
+
+RD 118
+WR R0
+RD R0
+WR 131
+
+RD 109
+WR R0
+RD R0
+WR 120
+
+RD 119
+WR R0
+RD R0
+WR 130
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+RD #100
+WR 80
+RD #119
+WR 81
+RD #10
+WR 82
+LOOP:
+RD @80
+WR R1
+RD @81
+WR @80
+RD R1
+WR @81
+RD 80
+ADD #1
+WR 80
+RD 81
+SUB #1
+WR 81
+RD 82
+SUB #1
+WR 82
+JNZ LOOP
+HLT

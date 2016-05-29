@@ -1,0 +1,26 @@
+in
+wr 100
+rd 100
+div #10
+wr 101
+rd 101
+mul #10
+wr 90
+rd 100
+sub 90
+wr 102
+rd 101
+add #80
+wr 103 
+rd 102
+add #80
+wr 104
+rd @103
+wr 105
+rd @104
+wr 106
+rd 105
+wr @104
+rd 106
+wr @103
+hlt
