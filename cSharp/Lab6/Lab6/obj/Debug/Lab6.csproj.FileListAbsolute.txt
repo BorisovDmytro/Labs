@@ -1,0 +1,13 @@
+D:\dat\cSharp\Lab6\Lab6\bin\Debug\Lab6.dll
+D:\dat\cSharp\Lab6\Lab6\bin\Debug\Lab6.pdb
+D:\dat\cSharp\Lab6\Lab6\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\dat\cSharp\Lab6\Lab6\obj\Debug\Lab6.csprojResolveAssemblyReference.cache
+D:\dat\cSharp\Lab6\Lab6\obj\Debug\Lab6.dll
+D:\dat\cSharp\Lab6\Lab6\obj\Debug\Lab6.pdb
+D:\dat\cSharp\Lab6\Lab6\bin\Debug\MongoDB.Bson.dll
+D:\dat\cSharp\Lab6\Lab6\bin\Debug\MongoDB.Driver.Core.dll
+D:\dat\cSharp\Lab6\Lab6\bin\Debug\MongoDB.Driver.dll
+D:\dat\cSharp\Lab6\Lab6\bin\Debug\MongoDB.Driver.Legacy.dll
+D:\dat\cSharp\Lab6\Lab6\bin\Debug\MongoDB.Bson.xml
+D:\dat\cSharp\Lab6\Lab6\bin\Debug\MongoDB.Driver.xml
+D:\dat\cSharp\Lab6\Lab6\bin\Debug\MongoDB.Driver.Legacy.xml
