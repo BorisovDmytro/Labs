@@ -1,0 +1,100 @@
+﻿<nav class="navbar navbar-inverse nav-bar-fixed" ng-init="$ctrl.init()">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Lab5</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown">
+                    Seller
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a data-toggle="modal" data-target="#sellerDlg"
+                           ng-click="$ctrl.onCreateSeller()">Add</a></li>
+                    <li><a data-toggle="modal" data-target="#productDlg"
+                           ng-click="$ctrl.onAddProduct()">
+                      Add product</a>
+                    </li>
+                    <li><a ng-click="$ctrl.onRemoveSeller()">Remove</a></li>
+                    <li><a data-toggle="modal" data-target="#sellerDlg"
+                           ng-click="$ctrl.onUpdateSeller()">Update</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown">
+                    Product
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a ng-click="$ctrl.onRemoveProduct()">Remove</a></li>
+                    <li><a ng-click="$ctrl.onUpdateProduct()"
+                           data-toggle="modal" data-target="#productDlg">
+                      Update
+                    </a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+<div class="panel panel-default nav-table-seller">
+    <div class="panel-heading">
+        Sellers
+    </div>
+    <div class="panel-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Second name</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="seller in $ctrl.sellers" 
+                    ng-class="seller.isSelected ? 'info' : ''" 
+                    ng-click="$ctrl.onSellerClick(seller)">
+                    <td>{{seller.Id}}</td>
+                    <td>{{seller.Name}}</td>
+                    <td>{{seller.SecondName}}</td>
+                    <td>{{seller.Age}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="panel panel-default nav-table-product">
+    <div class="panel-heading">
+        Products
+    </div>
+    <div class="panel-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Manufacturer</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="product in $ctrl.products"
+                    ng-class="product.isSelected ? 'info' : ''" 
+                    ng-click="$ctrl.onProductClick(product)">
+                    <td>{{product.Id}}</td>
+                    <td>{{product.Name}}</td>
+                    <td>{{product.Manufacturer}}</td>
+                    <td>{{product.Price}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<seller-dlg seller="$ctrl.seller" submite-cb="$ctrl.SellerDlgCb" is-valid="$ctrl.sellerValid"></seller-dlg>
+<product-dlg product="$ctrl.product" submite-cb="$ctrl.ProductDlgCb" is-valid="$ctrl.productValid"></product-dlg>

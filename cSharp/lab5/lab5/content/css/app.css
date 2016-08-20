@@ -1,0 +1,31 @@
+﻿body {
+}
+
+.nav-bar-fixed {
+    position: fixed;
+    right: 0px; 
+    top: 0px; 
+    width: 100%;
+    z-index: 100;
+    cursor: default;
+}
+
+.nav-table-seller {
+    cursor: default;
+    position: absolute;
+    left: 0px;
+    top: 50px;
+    width: 50%;
+    z-index: 0;
+    height: calc(100% - 80px);
+}
+
+.nav-table-product {
+    cursor: default;
+    position: absolute;
+    left: 50%;
+    top: 50px;
+    width: 50%;
+    z-index: 0;
+    height: calc(100% - 80px);
+}

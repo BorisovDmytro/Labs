@@ -1,0 +1,29 @@
+﻿<div class="modal fade" id="sellerDlg" role="dialog">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Seller dialog</h4>
+      </div>
+      <div class="modal-body">
+        <div class="form-group" ng-show="$ctrl.isValid">
+          <label>Name:</label>
+          <input type="text" class="form-control" ng-model="$ctrl.seller.Name">
+          <label>Second name:</label>
+          <input type="text" class="form-control" ng-model="$ctrl.seller.SecondName">
+          <label>Age:</label>
+          <input type="text" class="form-control" ng-model="$ctrl.seller.Age">
+        </div>
+        <div ng-show="!$ctrl.isValid">
+          No selected iteam
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal"
+                ng-show="$ctrl.isValid"
+                ng-click="$ctrl.onSubmitClick()">Submit</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
